@@ -1,0 +1,14 @@
+{
+  "name": "menghuanxiyou-mobile-game-webcam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zjffun/menghuanxiyou-mobile-game-webcam.git",
+  "author": "Jufeng Zhang <zjffun@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "camera-capture": "^0.0.11",
+    "jimp": "^0.16.1",
+    "node-notifier": "^10.0.1",
+    "puppeteer": "^15.2.0"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="webcam-select"></select>
+    <hr />
+    <video id="webcam-video"></video>
+    <script>
+      async function main() {
+        const videoEl = document.getElementById("webcam-video");
+        const selectEl = document.getElementById("webcam-select");
+
+        await navigator.mediaDevices.getUserMedia({
+          video: true,
+        });
+        const devices = await navigator.mediaDevices.enumerateDevices();
+
+        devices.forEach((device) => {
+          selectEl.insertAdjacentHTML(
+            "beforeend",
+            `<option value="${device.deviceId}">${device.label} - ${device.deviceId}</option>`
+          );
+        });
+
+        selectEl.addEventListener("change", (e) => {
+          changeDevice(e.target.value);
+        });
+
+        async function changeDevice(deviceId) {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: {
+              deviceId,
+            },
+          });
+          videoEl.srcObject = stream;
+
+          videoEl.onloadedmetadata = function (e) {
+            videoEl.play();
+          };
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>
