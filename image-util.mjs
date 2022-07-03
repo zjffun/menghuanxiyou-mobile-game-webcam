@@ -66,7 +66,7 @@ export default class ImageUtil {
         input.copyTo(logImg);
         // template.copyTo(logImg)
         cv.rectangle(logImg, maxPoint, point, color, 2, cv.LINE_8, 0);
-        drawImg(logImg, `./temp/findImgRect-${Date.now()}.jpg`);
+        // drawImg(logImg, `./temp/findImgRect-${Date.now()}.jpg`);
       }
 
       let rect = new cv.Rect(

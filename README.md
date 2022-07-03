@@ -7,8 +7,4 @@
 使用：
 
 1. 下载 `https://docs.opencv.org/4.4.0/opencv.js` 放到 `lib` 文件夹；
-2. `camera-capture` 包做了一些修改，支持了获取设别列表。
-
-待办：
-
-- 为 `camera-capture` 提 PR 以支持获取设别列表。
+2. `camera-capture` 包做了一些修改，支持了获取设别列表。参见：https://github.com/cancerberoSgx/camera-capture/pull/22

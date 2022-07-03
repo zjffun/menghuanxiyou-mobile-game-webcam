@@ -22,15 +22,11 @@ await videoCapture.initialize();
 
 const devicesList = await videoCapture.getDevicesList();
 
-videoCapture.o.constrains = {
+await videoCapture.startCamera({
   video: {
     deviceId: devicesList[3].deviceId,
   },
-};
-
-await videoCapture.startCamera();
-
-let i = 0;
+});
 
 while (true) {
   await new Promise((resolve, reject) => {
