@@ -35,7 +35,7 @@ while (true) {
 
   let f = await videoCapture.readFrame("rgba"); // raw image data (as default)
 
-  drawImg(f, `./temp/webcam-${Date.now()}.jpg`);
+  // drawImg(f, `./temp/webcam-${Date.now()}.jpg`);
 
   const mat = cv.matFromImageData(f);
   // const imageData = await Jimp.read(readFileSync("./test.png"));

@@ -1,7 +1,8 @@
 {
   "name": "menghuanxiyou-mobile-game-webcam",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
+  "bin": "index.mjs",
   "repository": "git@github.com:zjffun/menghuanxiyou-mobile-game-webcam.git",
   "author": "Jufeng Zhang <zjffun@gmail.com>",
   "license": "MIT",
