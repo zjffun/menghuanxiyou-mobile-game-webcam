@@ -6,6 +6,9 @@
   "repository": "git@github.com:zjffun/menghuanxiyou-mobile-game-webcam.git",
   "author": "Jufeng Zhang <zjffun@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.mjs"
+  },
   "dependencies": {
     "camera-capture": "^0.0.11",
     "jimp": "^0.16.1",
