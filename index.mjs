@@ -16,6 +16,13 @@ const imageUtil = new ImageUtil(mat);
 const videoCapture = new VideoCapture({
   video: true,
   mime: "image/png",
+  puppeteerOptions: {
+    // default Chromium has bug that video will black after about 20 minute
+    executablePath:
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    // headless set to true in camera-capture and can't overwrite
+    // headless: false,
+  },
 });
 
 await videoCapture.initialize();
