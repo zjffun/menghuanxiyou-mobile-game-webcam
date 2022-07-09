@@ -17,6 +17,7 @@ const videoCapture = new VideoCapture({
   video: true,
   mime: "image/png",
   puppeteerOptions: {
+    // bug: black video
     // default Chromium has bug that video will black after about 20 minute
     executablePath:
       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
